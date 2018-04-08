@@ -1,0 +1,15 @@
+USING YARN FOR ANGULAR CLI:
+    yarn --version    // 0.19.x at least to avoid issues with global packages
+    yarn global bin    // Then you need to ensure that the folder where Yarn writes the global packages executable files.
+    yarn global add @angular/cli    // get Angular CLI
+    ng new test-project --skip-install    // When you create a new project, the CLI goes and runs npm install for you by default. You can tell it not to by passing a --skip-install flag (-si for short)
+        But then you’ll have to go run Yarn yourself
+            cd test-project
+            yarn
+    ng set --global packageManager=yarn    // tell the CLI to use Yarn instead of NPM
+
+
+WORKING WITH PROJECT 
+    npm start or ng serve    // start angular - to get going with the project
+        [--open (-o)]  // option will automatically open your browser on http://localhost:4200/    
+        
