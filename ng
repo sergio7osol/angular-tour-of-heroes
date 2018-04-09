@@ -12,4 +12,4 @@ USING YARN FOR ANGULAR CLI:
 WORKING WITH PROJECT 
     npm start or ng serve    // start angular - to get going with the project
         [--open (-o)]  // option will automatically open your browser on http://localhost:4200/    
-        
+    ng generate component heroes    // generate a new component named heroes        
