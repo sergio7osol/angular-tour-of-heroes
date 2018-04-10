@@ -1,3 +1,16 @@
-<p>
-  {{hero}}
-</p>
+<article class="svo-article">
+  <header class="svo-article__header">
+    <h2>{{ hero.name | uppercase }} Details</h2>
+  </header>
+  <div class="svo-article__body">
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+        <label>name:
+          <input [(ngModel)]="hero.name" placeholder="name">
+        </label>
+    </div>
+  </div>
+  <footer class="svo-article__footer">
+    {{hero.birthday | date:"d/M/y"}}
+  </footer>
+</article>

@@ -1,0 +1,11 @@
+.svo-article {
+
+}
+.svo-article__header {
+    font-size: 2em;
+    color:  #974787;
+}
+.svo-article__footer {
+    font-size: .8em;
+    color:  #888;
+}
