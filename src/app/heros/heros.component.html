@@ -1,16 +1,25 @@
-<article class="svo-article">
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero" 
+      (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<article class="svo-article" *ngIf="selectedHero">
   <header class="svo-article__header">
-    <h2>{{ hero.name | uppercase }} Details</h2>
+    <h2>{{ selectedHero.name | uppercase }} Details</h2>
   </header>
   <div class="svo-article__body">
-    <div><span>id: </span>{{hero.id}}</div>
+    <div><span>id: </span>{{selectedHero.id}}</div>
     <div>
         <label>name:
-          <input [(ngModel)]="hero.name" placeholder="name">
+          <input [(ngModel)]="selectedHero.name" placeholder="name">
         </label>
     </div>
   </div>
   <footer class="svo-article__footer">
-    {{hero.birthday | date:"d/M/y"}}
+    <!-- {{selectedHero.birthday | date:"d/M/y"}} -->
   </footer>
 </article>
